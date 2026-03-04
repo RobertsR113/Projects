@@ -13,4 +13,4 @@ To showcase my knowledge and skillset in Java acquired from my 1st year study co
 * Using UUID's, enum's and timestampts for transaction events.
 * Clean and well structured project.
 
-### Run/main method found in Main.java
+### Run/main method found in BankSimulator/Main.java
