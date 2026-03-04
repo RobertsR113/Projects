@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="1200.0" style="-fx-background-color: #221e1e; -fx-border-color: #ffffff;" stylesheets="@../Design.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Admin.mainScreen">
+
+   <TextField fx:id="name" layoutX="14.0" layoutY="15.0" prefHeight="30.0" prefWidth="130.0" promptText="Name" styleClass="inputField-design" />
+   <TextField fx:id="surname" layoutX="146.0" layoutY="15.0" prefHeight="30.0" prefWidth="130.0" promptText="Surname" styleClass="inputField-design" />
+   <PasswordField fx:id="password" layoutX="278.0" layoutY="15.0" prefHeight="30.0" prefWidth="130.0" promptText="Password" styleClass="inputField-design" />
+   <TextField fx:id="email" layoutX="410.0" layoutY="15.0" prefHeight="30.0" prefWidth="170.0" promptText="Email" styleClass="inputField-design" />
+
+   <ChoiceBox fx:id="departmentChoice" layoutX="582.0" layoutY="15.0" prefHeight="30.0" prefWidth="120.0" styleClass="inputField-design" />
+   <ChoiceBox fx:id="roleChoice" layoutX="704.0" layoutY="15.0" prefHeight="30.0" prefWidth="100.0" styleClass="inputField-design" />   
+
+   <TextField fx:id="wage" layoutX="806.0" layoutY="15.0" prefHeight="35.0" prefWidth="100.0" promptText="Wage" styleClass="inputField-design" />   
+
+   <Button layoutX="914.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAddClick" prefHeight="35.0" prefWidth="80.0" style="-fx-border-image-width: 1;" styleClass="button-design" text="Add">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Button>
+
+   <Button layoutX="1100.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onLogsClick" prefHeight="36.0" prefWidth="85.0" styleClass="button-design" text="Logs">
+      <font>
+         <Font size="17.0" />
+      </font>
+   </Button>
+
+   <Button layoutX="1101.0" layoutY="112.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRemoveClick" prefHeight="36.0" prefWidth="85.0" styleClass="button-design" text="Remove">
+      <font>
+         <Font size="17.0" />
+      </font>
+   </Button>
+   
+   <Button layoutX="1100.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onExitClick" prefHeight="36.0" prefWidth="85.0" styleClass="button-design" text="Exit">
+      <font>
+         <Font size="17.0" />
+      </font>
+   </Button>
+
+   <Label fx:id="errorMessage" alignment="CENTER" layoutX="287.0" layoutY="110.0" prefHeight="41.0" prefWidth="660.0" textFill="RED">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="successMessage" alignment="CENTER" layoutX="287.0" layoutY="110.0" prefHeight="41.0" prefWidth="660.0" textFill="GREEN">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+
+   <TableView fx:id="staffTable" layoutX="15.0" layoutY="166.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="1170.0" styleClass="tableView-design">
+        <columns>
+            <TableColumn fx:id="colName" style="-fx-border-width: 1 0 1 0;" styleClass="tableViewCol-design" text="Name" />
+            <TableColumn fx:id="colSurname" styleClass="tableViewCol-design" text="Surname" />
+            <TableColumn fx:id="colEmail" styleClass="tableViewCol-design" text="Email" />
+            <TableColumn fx:id="colPassword" styleClass="tableViewCol-design" text="Password" />
+            <TableColumn fx:id="colDepartment" styleClass="tableViewCol-design" text="Department" />
+            <TableColumn fx:id="colRole" styleClass="tableViewCol-design" text="Role" />
+            <TableColumn fx:id="colWage" styleClass="tableViewCol-design" text="Wage" />
+            <TableColumn fx:id="colUUID" styleClass="tableViewCol-design" text="UUID" />
+        </columns>
+   </TableView>
+
+   <Label fx:id="welcomeMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="550.0" styleClass="label-design" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+
+</Pane>

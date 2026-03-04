@@ -1,0 +1,195 @@
+.button-design
+{
+    background-color: #463939;
+    -fx-background-color: #463939; 
+    -fx-background-radius: 15; 
+    -fx-background-insets: 1; 
+
+    border-radius: 15;
+    -fx-border-radius: 15; 
+    border-color: #ffffff;
+    -fx-border-color: #ffffff; 
+    border-width: 2;
+    -fx-border-width: 2;
+
+    font-size: 15px;
+    -fx-font-size: 15px; 
+    -fx-text-fill: #dcf7ff; 
+    font-weight: bold;
+    -fx-font-weight: bold;
+
+    -fx-effect: dropshadow(gaussian, #009DFF, 8, 0.5, 0, 0);
+}
+
+
+
+.inputField-design
+{
+    background-color: #332929;
+    -fx-background-color: #332929;  
+
+    border-color: #ffffff;
+    -fx-border-color: #ffffff; 
+    border-width: 2;
+    -fx-border-width: 2; 
+
+    font-size: 15px;
+    -fx-font-size: 15px; 
+    -fx-text-fill: #a3eaff; 
+
+    -fx-effect: dropshadow(gaussian, #009DFF, 8, 0.5, 0, 0);
+}
+.inputField-design > .label 
+{
+    -fx-text-fill: #a3eaff;
+    -fx-effect: dropshadow(gaussian, #009DFF, 8, 0.5, 0, 0);
+}
+
+
+
+.label-design
+{
+    -fx-text-fill: #a3eaff; 
+
+    -fx-effect: dropshadow(gaussian, #009DFF, 8, 0.5, 0, 0);
+}
+
+
+
+.listView-design 
+{
+    background-color: #332929;
+    -fx-background-color: #332929;
+
+    border-color: #ffd9d9;
+    -fx-border-color: #ffd9d9;
+    border-width: 1;
+    -fx-border-width: 1;
+
+    -fx-effect: dropshadow(gaussian, #009DFF, 8, 0.5, 0, 0);
+}
+.listView-design .list-cell 
+{
+    background-color: #332929;
+    -fx-background-color: #332929;
+
+    -fx-text-fill: #d6d6d6;
+    font-size: 13px;
+    -fx-font-size: 13px;
+    font-weight: normal;
+    -fx-font-weight: normal;
+}
+.listView-design .list-cell:selected 
+{
+    background-color: #665353;
+    -fx-background-color: #665353;
+    -fx-text-fill: #ffffff;
+}
+
+.list-view .scroll-bar:vertical 
+{
+    background-color: #221e1e;
+    -fx-background-color: #221e1e;
+}
+.list-view .scroll-bar:vertical .track 
+{
+
+    background-color: #332929;
+    -fx-background-color: #332929;
+
+    border-color: #ffd9d9;
+    -fx-border-color: #ffd9d9;
+    border-width: 1;
+    -fx-border-width: 1;
+}
+.list-view .scroll-bar:vertical .thumb 
+{
+    background-color: #ffffff;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5;
+}
+
+
+
+.tableView-design 
+{
+    background-color: #332929;
+    -fx-background-color: #332929;
+
+    border-color: #ffd9d9;
+    -fx-border-color: #ffd9d9;
+    border-width: 0 1 1 1;
+    -fx-border-width: 0 1 1 1;
+
+    -fx-effect: dropshadow(gaussian, #009DFF, 8, 0.5, 0, 0);
+}
+
+.tableView-design .table-row-cell 
+{
+    background-color: #332929;
+    -fx-background-color: #332929;
+}
+.tableView-design .table-cell 
+{
+    font-size: 13px;
+    -fx-font-size: 13px;
+
+    font-weight: normal;
+    -fx-font-weight: normal;
+    -fx-text-fill: #d6d6d6;
+}
+.tableView-design .table-row-cell:filled:selected .table-cell,
+.tableView-design .table-row-cell:selected .table-cell 
+{
+    background-color: #c9c9c9;
+    -fx-background-color: #c9c9c9;
+
+    font-size: 15px;
+    -fx-font-size: 15px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4d4d4d;
+}
+
+.tableViewCol-design
+{
+    -fx-alignment: CENTER; 
+
+    background-color: #332929;
+    -fx-background-color: #332929; 
+
+    border-color: #ffd9d9;
+    -fx-border-color: #ffd9d9; 
+    border-width: 1 0 1 1;
+    -fx-border-width: 1 0 1 1; 
+
+    font-size: 15px;
+    -fx-font-size: 15px; 
+    -fx-text-background-color: #ffffff; 
+    font-weight: bold;
+    -fx-font-weight: bold;
+
+    -fx-effect: dropshadow(gaussian, #009DFF, 8, 0.5, 0, 0);
+}
+
+.table-view .scroll-bar:vertical 
+{
+    background-color: #221e1e;
+    -fx-background-color: #221e1e;
+}
+.table-view .scroll-bar:vertical .track 
+{
+    background-color: #332929;
+    -fx-background-color: #332929;
+
+    border-color: #ffd9d9;
+    -fx-border-color: #ffd9d9;
+    border-width: 1;
+    -fx-border-width: 1;
+}
+.table-view .scroll-bar:vertical .thumb 
+{
+    background-color: #ffffff;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5;
+}
