@@ -14,9 +14,12 @@ To showcase my knowledge and skillset in JavaFX acquired from my 1st year study 
 * Other roles including department lead can see info screen - see their wage, department, role, etc...
 * Storage - Users are saved and loaded from a .txt file.
 
-### Run/main method found in: 
+## How To Test:
+1. Download `javafx-staff-management-system`
+2. Download `IntelliJ` (Recommended IntelliJ 2025.x).
+3. In IntelliJ: `File -> Open -> Click on javafx-staff-management-system`
+4. Run/main method found in: 
 `javafx-staff-management-system\StaffManagementSystem\src\main\java\com\example\Launch.java`
-
-### Owner role login: 
+5. Owner role login: 
 * Login: `bob@gmail.com`
 * Password: `Admin#1111`
