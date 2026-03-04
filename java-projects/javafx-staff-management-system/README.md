@@ -15,7 +15,7 @@ To showcase my knowledge and skillset in JavaFX acquired from my 1st year study 
 * Storage - Users are saved and loaded from a .txt file.
 
 ### Run/main method found in: 
-'javafx-staff-management-system\StaffManagementSystem\src\main\java\com\example\Launch.java'
+`javafx-staff-management-system\StaffManagementSystem\src\main\java\com\example\Launch.java`
 
 ### Owner role login: 
 * Login: `bob@gmail.com`
