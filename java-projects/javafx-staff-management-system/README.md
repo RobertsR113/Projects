@@ -8,6 +8,15 @@
 To showcase my knowledge and skillset in JavaFX acquired from my 1st year study course, Java-Fundamentals.
 
 ## Features
-//todo
+* Access level control - Each role has their own display.
+* Admin/owner role can view every employee, add/remove them and have access to Logs.
+* Department Lead role can view every employee under their department.
+* Other roles including department lead can see info screen - see their wage, department, role, etc...
+* Storage - Users are saved and loaded from a .txt file.
 
-### Run/main method found in //todo
+### Run/main method found in: 
+javafx-staff-management-system\StaffManagementSystem\src\main\java\com\example\Launch.java
+
+### Owner role login: 
+* Login: `bob@gmail.com`
+* Password: `Admin#1111`
