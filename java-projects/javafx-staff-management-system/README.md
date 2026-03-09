@@ -15,8 +15,8 @@ To showcase my knowledge and skillset in JavaFX acquired during my first-year co
 * Storage - Users are saved and loaded from a .txt file.
 
 ## How To Test:
-1. Download `javafx-staff-management-system`
-2. Download `IntelliJ`
+1. Download the project `javafx-staff-management-system`
+2. Install `IntelliJ IDEA`
 3. In IntelliJ: Click on `Open` -> Find and Select `javafx-staff-management-system`
 4. Run/main method found in: 
 `javafx-staff-management-system\StaffManagementSystem\src\main\java\com\example\Launch.java`
