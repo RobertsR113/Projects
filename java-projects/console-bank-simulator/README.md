@@ -16,6 +16,6 @@ To showcase my knowledge and skillset in Java acquired during my first-year cour
 ## How To Test:
 1. Download the project `console-bank-simulator`
 2. Install `IntelliJ IDEA`
-3. In IntelliJ: Click on `Open` -> Find and Select `console-bank-simulator`
+3. In IntelliJ: Click on `Open` -> Select `console-bank-simulator` folder
 4. Run/main method found in: 
 `console-bank-simulator\BankSimulator\Main.java`
