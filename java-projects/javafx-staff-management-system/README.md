@@ -17,7 +17,7 @@ To showcase my knowledge and skillset in JavaFX acquired during my first-year co
 ## How To Test:
 1. Download the project `javafx-staff-management-system`
 2. Install `IntelliJ IDEA`
-3. In IntelliJ: Click on `Open` -> Find and Select `javafx-staff-management-system`
+3. In IntelliJ: Click on `Open` -> Select `javafx-staff-management-system` folder
 4. Run/main method found in: 
 `javafx-staff-management-system\StaffManagementSystem\src\main\java\com\example\Launch.java`
 5. Owner role login: 
