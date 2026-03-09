@@ -1,1 +1,23 @@
-//todo
+# SpringBoot ATM Simulator
+
+### Created Using:
+* To Create Project: start.spring.io
+* Languages: Java, JS, HTML.
+* Software: IntelliJ 2024 Community Edition.
+* Libraries: Thymeleaf, Spring Web and jQuirry.
+
+### Goal:
+To showcase my knowledge and skills in Java Spring Boot web development acquired during my first-year course, Java Fundamentals.
+
+### Features:
+* Register/Login customer accounts (saving or checking) and manage bank money (withdraw or deposit).
+* Logs system tracking customer withdraws/deposits.
+* Using UUID's, enum's and timestampts for transaction events.
+* Clean and well structured project.
+
+## How To Test:
+1. Download `console-bank-simulator`
+2. Download `IntelliJ`
+3. In IntelliJ: Click on `Open` -> Find and Select `console-bank-simulator`
+4. Run/main method found in: 
+`console-bank-simulator\BankSimulator\Main.java`
