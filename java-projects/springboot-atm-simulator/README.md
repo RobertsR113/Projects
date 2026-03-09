@@ -11,13 +11,14 @@ To showcase my knowledge and skills in Java Spring Boot web development acquired
 
 ### Features:
 * Register/Login customer accounts and manage withdraw of bank money.
-* User can withdraw min or max currency, example, 150$ deposit, max currency: 1x 100$ + 1x 50$.
+* User can withdraw min or max currency depending on ATM storage.
 * Users and user bank money is loaded and saved in a .txt file.
 * Clean and well structured project.
 
 ## How To Test:
-1. Download `springboot-atm-simulator`
-2. Download `IntelliJ`
-3. In IntelliJ: Click on `Open` -> Find and Select `springboot-atm-simulator`
+1. Download the project `springboot-atm-simulator`
+2. Install `IntelliJ IDEA`
+3. In IntelliJ: Click on `Open` -> Select `springboot-atm-simulator` folder
 4. Run/main method found in: 
 `springboot-atm-simulator\src\main\java\org.example\AtminwebApplication.java`
+5. After launch open any web browser and use http://localhost:8080
