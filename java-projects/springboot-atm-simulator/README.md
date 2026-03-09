@@ -21,4 +21,4 @@ To showcase my knowledge and skills in Java Spring Boot web development acquired
 3. In IntelliJ: Click on `Open` -> Select `springboot-atm-simulator` folder
 4. Run/main method found in: 
 `springboot-atm-simulator\src\main\java\org.example\AtminwebApplication.java`
-5. After launch open any web browser and use http://localhost:8080
+5. After launch open any web browser and search http://localhost:8080
