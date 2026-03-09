@@ -10,14 +10,14 @@
 To showcase my knowledge and skills in Java Spring Boot web development acquired during my first-year course, Java Fundamentals.
 
 ### Features:
-* Register/Login customer accounts (saving or checking) and manage bank money (withdraw or deposit).
-* Logs system tracking customer withdraws/deposits.
-* Using UUID's, enum's and timestampts for transaction events.
+* Register/Login customer accounts and manage withdraw of bank money.
+* User can withdraw min or max currency, example, 150$ deposit, max currency: 1x 100$ + 1x 50$.
+* Users and user bank money is loaded and saved in a .txt file.
 * Clean and well structured project.
 
 ## How To Test:
-1. Download `console-bank-simulator`
+1. Download `springboot-atm-simulator`
 2. Download `IntelliJ`
-3. In IntelliJ: Click on `Open` -> Find and Select `console-bank-simulator`
+3. In IntelliJ: Click on `Open` -> Find and Select `springboot-atm-simulator`
 4. Run/main method found in: 
-`console-bank-simulator\BankSimulator\Main.java`
+`springboot-atm-simulator\src\main\java\org.example\AtminwebApplication.java`
