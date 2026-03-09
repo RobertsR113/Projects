@@ -5,7 +5,7 @@
 * Software: IntelliJ 2024 Community Edition.
 
 ## Goal
-To showcase my knowledge and skillset in JavaFX acquired from my 1st year study course, Java-Fundamentals.
+To showcase my knowledge and skillset in JavaFX acquired during my first-year course, Java Fundamentals.
 
 ## Features
 * Access level control - Each role has their own display.
