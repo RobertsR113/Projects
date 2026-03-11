@@ -11,8 +11,8 @@ To showcase my knowledge and skillset in JavaFX acquired during my first-year co
 * Access level control - Each role has their own display.
 * Admin/owner role can view every employee, add/remove them and have access to Logs.
 * Department Lead role can view every employee under their department.
-* Other roles including department lead can see info screen - see their wage, department, role, etc...
-* Storage - Users are saved and loaded from a .txt file.
+* Other roles including department lead can see info screen - see their wage, department, role, etc..
+* Users are saved/loaded from a persistant storage.
 
 ## How To Test:
 1. Download the project `javafx-staff-management-system`
