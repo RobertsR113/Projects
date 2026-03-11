@@ -1,8 +1,9 @@
-# JavaFX Desktop Staff Management System
+# WPF Desktop Casino Simulator
 
 ### Created Using:
 * Language: C#
 * Software: Visual Studio 2024
+* Framework: WPF (Windows Presentation Foundation)
 
 ## Goal
 To showcase my knowledge and skillset in C#, WPF acquired during my second-year course, C# Fundamentals.
@@ -15,11 +16,6 @@ To showcase my knowledge and skillset in C#, WPF acquired during my second-year 
 * Clean and well structured project.
 
 ## How To Test:
-1. Download the project `javafx-staff-management-system`
-2. Install `IntelliJ IDEA`
-3. In IntelliJ: Click on `Open` -> Select `javafx-staff-management-system` folder
-4. Run/main method found in: 
-`javafx-staff-management-system\StaffManagementSystem\src\main\java\com\example\Launch.java`
-5. Owner role login: 
-* Login: `bob@gmail.com`
-* Password: `Admin#1111`
+1. Download the project `wpf-casino-simulator`
+2. Install `Visual Studio 2024` OR `Visual Studio 2026`
+3. In Visual Studio: Click on `Open a project or solution` -> Open `wpf-casino-simulator/CasinoSim` -> Click on `CasinoSimulator.sln`
