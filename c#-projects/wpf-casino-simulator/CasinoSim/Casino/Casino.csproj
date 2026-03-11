@@ -1,0 +1,317 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Games\BlackjackMain.png" />
+    <None Remove="Games\Roulette.png" />
+    <None Remove="MainScreens\GameScreen.png" />
+    <None Remove="MainScreens\Login.png" />
+    <None Remove="MainScreens\Register.png" />
+    <None Remove="Pictures\BlackJack\Card\1_back.png" />
+    <None Remove="Pictures\BlackJack\Card\2_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\2_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\2_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\2_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\3_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\3_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\3_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\3_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\4_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\4_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\4_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\4_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\5_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\5_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\5_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\5_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\6_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\6_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\6_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\6_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\7_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\7_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\7_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\7_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\8_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\8_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\8_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\8_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\99_10_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\99_10_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\99_10_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\99_10_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\9_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\9_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\9_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\9_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\jack_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\jack_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\jack_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\jack_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\king_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\king_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\king_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\king_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\queen_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\queen_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\Card\queen_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\queen_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\r_ace_of_clubs.png" />
+    <None Remove="Pictures\BlackJack\Card\r_ace_of_hearts.png" />
+    <None Remove="Pictures\BlackJack\Card\r_ace_of_spades.png" />
+    <None Remove="Pictures\BlackJack\Card\r__ace_of_diamonds.png" />
+    <None Remove="Pictures\BlackJack\catWon.gif" />
+    <None Remove="Pictures\BlackJack\catWon.png" />
+    <None Remove="Pictures\BlackJack\defaultCat.png" />
+    <None Remove="Pictures\Roulette\RouletteSpin.gif" />
+    <None Remove="Pictures\Roulette\winningChoice.png" />
+    <None Remove="Pictures\Roulette\winningNr.png" />
+    <None Remove="Pictures\Slots\A.png" />
+    <None Remove="Pictures\Slots\B.png" />
+    <None Remove="Pictures\Slots\C.png" />
+    <None Remove="Pictures\Slots\D.png" />
+    <None Remove="Pictures\Slots\Jackpot.png" />
+    <None Remove="Pictures\Slots\LeverDown.png" />
+    <None Remove="Pictures\Slots\LeverUp.png" />
+    <None Remove="Pictures\Slots\Main.png" />
+    <None Remove="Sounds\BlackJack\Victory.mp3" />
+    <None Remove="Sounds\BlackJack\WompWomp.mp3" />
+    <None Remove="Sounds\Roulette\WheelSpin.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Games\BlackjackMain.png" />
+    <Resource Include="Games\Roulette.png" />
+    <Resource Include="Games\SlotsMain.png" />
+    <Resource Include="Pictures\BlackJack\BlackjackMain.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\1_back.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\2_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\2_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\2_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\2_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\3_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\3_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\3_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\3_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\4_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\4_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\4_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\4_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\5_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\5_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\5_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\5_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\6_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\6_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\6_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\6_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\7_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\7_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\7_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\7_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\8_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\8_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\8_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\8_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\99_10_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\99_10_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\99_10_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\99_10_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\9_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\9_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\9_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\9_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\jack_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\jack_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\jack_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\jack_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\king_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\king_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\king_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\king_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\queen_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\queen_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\queen_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\queen_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\r_ace_of_clubs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\r_ace_of_hearts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\r_ace_of_spades.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\Card\r__ace_of_diamonds.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\catWon.gif">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\BlackJack\defaultCat.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Roulette\RouletteSpin.gif">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Roulette\winningChoice.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Roulette\winningNr.png" />
+    <Resource Include="Pictures\Slots\A.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Slots\C.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Slots\D.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Slots\Jackpot.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Slots\LeverDown.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Slots\LeverUp.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pictures\Slots\B.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Slots\Main.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MainScreens\GameScreen.png" />
+    <Resource Include="MainScreens\Login.png" />
+    <Resource Include="MainScreens\Register.png" />
+    <Content Include="Sounds\BlackJack\Victory.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\BlackJack\WompWomp.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Roulette\WheelSpin.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
