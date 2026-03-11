@@ -1,0 +1,1 @@
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.Client\obj\Debug\net8.0\staticwebassets.build.json
