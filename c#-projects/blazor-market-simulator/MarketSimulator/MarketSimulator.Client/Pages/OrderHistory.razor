@@ -1,0 +1,40 @@
+﻿@page "/Orders"
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<PageTitle>Shop</PageTitle>
+
+<h1>Shop</h1>
+
+<p>@Message</p>
+<ul style="list-style-type:none; padding-left:0;">
+    @foreach (string order in OrderList)
+    {
+        <li>@order</li>
+    }
+</ul>
+
+@code {
+    private string? Message { get; set; }
+    private List<string> OrderList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Message = "Loading...";
+        await LoadList();
+    }
+    private async Task LoadList()
+    {
+        List<string>? orders = await Http.GetFromJsonAsync<List<string>>("api/Shop/listOrders");
+        if (orders != null)
+        {
+            Message = "";
+            OrderList = orders;
+        }
+        else
+        {
+            Message = "Nothing to see yet... Go buy something!";
+            OrderList = new List<string>();
+        }
+    }
+}

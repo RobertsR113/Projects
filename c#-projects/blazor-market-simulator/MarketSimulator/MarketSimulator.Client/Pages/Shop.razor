@@ -1,0 +1,102 @@
+﻿
+@page "/Shop"
+@using MarketSimulator.SharedObjects
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<PageTitle>Shop</PageTitle>
+
+<h1>Shop</h1>
+
+<p>@Message</p>
+<br><ol>
+        @foreach (Product product in ProductList)
+        {
+            <li>
+                 Name: @product.Name, 
+                 Price: @product.Price$,
+                 Available: @product.Quantity
+                 <span style="margin-left:8px">@productMessage[product.Name]</span> <br>
+                 Your amount: <input type="number" style="width:70px;" @bind="requestedItems[product]" min="0" max="@product.Quantity" />
+
+            </li>
+        }
+    </ol>
+<br>
+<button @onclick="Purchase">Purchase</button>
+
+@code {
+    private string? Message { get; set; }
+    private List<Product> ProductList = new();
+    private Dictionary<string, string> productMessage = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Message = "Loading...";
+        await LoadList();
+        Message = "";
+    }
+    private async Task LoadList()
+    {
+        requestedItems = new();
+
+        List<Product>? products = await Http.GetFromJsonAsync<List<Product>>("api/Shop/listProducts");
+        if (products != null)
+            ProductList = products;
+        else
+        {
+            Message = "No products for now...";
+            ProductList = new List<Product>();
+        }
+
+        foreach (Product product in ProductList)
+        {
+            if (!requestedItems.ContainsKey(product))
+                requestedItems[product] = 0;
+
+            if (serverMessageForItem.TryGetValue(product.Name, out var msg))
+                productMessage[product.Name] = msg;
+            else if (!productMessage.ContainsKey(product.Name))
+                productMessage[product.Name] = string.Empty;
+        }
+        productsBought = false;
+    }
+
+    private bool productsBought = false;
+    private Dictionary<Product, int> requestedItems = new();
+    private Dictionary<string, string> serverMessageForItem = new();
+    private async Task Purchase()
+    {
+        foreach (KeyValuePair<Product, int> currentElement in requestedItems.ToList())
+        {
+            Product product = currentElement.Key;
+            int desiredAmount = currentElement.Value;
+            if (desiredAmount <= 0)
+                continue;
+            HttpResponseMessage response;
+            try
+            {
+                BuyProduct newProduct = new BuyProduct { Product = product, DesiredQuantity = desiredAmount };
+                response = await Http.PostAsJsonAsync("api/Shop/buy", newProduct);
+            }
+            catch (Exception ex)
+            {
+                Message = "Error: " + ex.Message;
+                StateHasChanged();
+                return;
+            }
+
+            string serverMessage = await response.Content.ReadAsStringAsync();
+            serverMessageForItem[product.Name] = serverMessage;
+            productMessage[product.Name] = serverMessage;
+
+            if (response.IsSuccessStatusCode)
+            {
+                productsBought = true;
+                Message = "Thank you for shopping!";
+                await LoadList();
+                StateHasChanged();
+            }
+        }
+    }
+}

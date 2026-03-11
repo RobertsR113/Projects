@@ -1,0 +1,136 @@
+﻿@page "/ShopInventory"
+@using MarketSimulator.SharedObjects
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<PageTitle>Shop Inventory</PageTitle>
+
+<h1>Shop Inventory</h1>
+<div>
+    Name: <input @bind="Name" placeholder="Name" style="width: 120px;" />, 
+    Price: <input @bind="Price" type="number" style="width: 90px;" /> $, 
+    Quantity: <input @bind="Quantity" type="number" style="width: 75px;" />
+    <button @onclick="AddProduct">Add Product</button>
+</div>
+<br>
+<p>@Message</p>
+<ol>
+        @foreach (Product product in ProductList)
+        {
+            <li>
+                 @product.Name, 
+                 Price: <input type="number" @bind="product.Price" style="width:90px" /> $, 
+                 Quantity: <input type="number" @bind="product.Quantity" style="width:75px" /> 
+                 <button @onclick="() => SaveChanges(product)">Save Changes</button>
+                 <button @onclick="() => Remove(product)">Remove</button>
+            </li>
+        }
+    </ol>
+
+@code {
+    private string? Message { get; set; }
+    private List<Product> ProductList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Message = "Loading...";
+        await LoadList();
+        Message = "";
+    }
+    private async Task LoadList()
+    {
+        List<Product>? products = await Http.GetFromJsonAsync<List<Product>>("api/ProductInventory/listProducts");
+        if (products != null)
+            ProductList = products;
+        else
+        {
+            Message = "No products for now...";
+            ProductList = new List<Product>();
+        }
+    }
+
+    private string? Name { get; set; }
+    private double Price { get; set; }
+    private int Quantity { get; set; }
+
+    private async Task AddProduct()
+    {
+        if (string.IsNullOrWhiteSpace(Name) || Price <= 0 || Quantity <= 0)
+        {
+            Message = "Invalid input! Please fill all fields correctly!";
+            return;
+        }
+
+        Product product = new Product(Name, Price, Quantity);
+
+        HttpResponseMessage response;
+        try
+        {
+            response = await Http.PostAsJsonAsync("api/ProductInventory/addProduct", product);
+        }
+        catch (Exception ex)
+        {
+            Message = "Error: " + ex.Message;
+            return;
+        }
+
+        string serverMessage = await response.Content.ReadAsStringAsync();
+        Message = serverMessage;
+
+        if (response.IsSuccessStatusCode)
+        {
+            await LoadList();
+            Name = null; Price = 0; Quantity = 0;
+            StateHasChanged();
+        }
+    }
+
+    private async Task SaveChanges(Product Product)
+    {
+        HttpResponseMessage response;
+        try
+        {
+            response = await Http.PostAsJsonAsync("api/ProductInventory/editProduct", Product);
+        }
+        catch (Exception ex)
+        {
+            Message = "Error: " + ex.Message;
+            StateHasChanged();
+            return;
+        }
+
+        string serverMessage = await response.Content.ReadAsStringAsync();
+        Message = serverMessage;
+
+        if (response.IsSuccessStatusCode)
+        {
+            await LoadList();
+            Name = null; Price = 0; Quantity = 0;
+            StateHasChanged();
+        }
+    }
+    private async Task Remove(Product Product)
+    {
+        HttpResponseMessage response;
+        try
+        {
+            response = await Http.PostAsJsonAsync("api/ProductInventory/removeProduct", Product);
+        }
+        catch (Exception ex)
+        {
+            Message = "Error: " + ex.Message;
+            StateHasChanged();
+            return;
+        }
+
+        string serverMessage = await response.Content.ReadAsStringAsync();
+        Message = serverMessage;
+
+        if (response.IsSuccessStatusCode)
+        {
+            await LoadList();
+            Name = null; Price = 0; Quantity = 0;
+            StateHasChanged();
+        }
+    }
+}
