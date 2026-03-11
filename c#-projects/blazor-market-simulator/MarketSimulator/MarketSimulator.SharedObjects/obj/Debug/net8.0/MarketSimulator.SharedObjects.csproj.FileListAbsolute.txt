@@ -1,0 +1,11 @@
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\bin\Debug\net8.0\MarketSimulator.SharedObjects.deps.json
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\bin\Debug\net8.0\MarketSimulator.SharedObjects.dll
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\bin\Debug\net8.0\MarketSimulator.SharedObjects.pdb
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\obj\Debug\net8.0\MarketSimulator.SharedObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\obj\Debug\net8.0\MarketSimulator.SharedObjects.AssemblyInfoInputs.cache
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\obj\Debug\net8.0\MarketSimulator.SharedObjects.AssemblyInfo.cs
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\obj\Debug\net8.0\MarketSimulator.SharedObjects.csproj.CoreCompileInputs.cache
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\obj\Debug\net8.0\MarketSimulator.SharedObjects.dll
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\obj\Debug\net8.0\refint\MarketSimulator.SharedObjects.dll
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\obj\Debug\net8.0\MarketSimulator.SharedObjects.pdb
+C:\Users\robit\Desktop\GitHub Projects\[2026] C#\blazor-market-simulator\MarketSimulator\MarketSimulator\MarketSimulator.SharedObjects\obj\Debug\net8.0\ref\MarketSimulator.SharedObjects.dll
