@@ -22,3 +22,4 @@ To showcase my knowledge and skills in Java Spring Boot web development acquired
 4. Run/main method found in: 
 `springboot-atm-simulator\src\main\java\org.example\AtminwebApplication.java`
 5. After launch open any web browser and search http://localhost:8080
+6. Admin login: Card Number: `admin` PIN: `admin123`
