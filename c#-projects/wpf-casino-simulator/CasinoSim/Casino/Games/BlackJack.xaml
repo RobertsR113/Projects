@@ -1,0 +1,209 @@
+﻿<Window x:Class="Casino.Games.BlackJack"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:Casino.Games"
+        mc:Ignorable="d"
+        Title="BlackJack" Height="600" Width="1000">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Games/BlackjackMain.png"/>
+        </Grid.Background>
+
+        <Image Name="defaultcat" Margin="34,0,748,379" Source="/Pictures/BlackJack/defaultCat.png" Stretch="Fill"/>
+        <Image Panel.ZIndex="1" Name="dealersSecretCard" Margin="257,10,592,367" Source="/Pictures/BlackJack/Card/1_back.png" Stretch="Fill"/>
+        <Button Name="standButton" Content="Stand" HorizontalAlignment="Left" Margin="78,367,0,0" VerticalAlignment="Top" Height="55" Width="130" Click="onStandClick" FontWeight="Bold" FontSize="32" Opacity="0">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9" Offset="0"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Name="messageDisplay" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="261,201,0,0" VerticalAlignment="Top" Width="463" Height="89" FontSize="35" FontWeight="Bold" FontFamily="Times New Roman" Content="" Foreground="#FFF11717"/>
+        <Label Name="betAmountLabel" Content="Enter Bet amount:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="394,379,0,0" VerticalAlignment="Top" Width="227" Height="39" FontSize="26" FontWeight="Bold" FontFamily="Times New Roman">
+            <Label.Background>
+                <SolidColorBrush Color="#FF8A3030" Opacity="0.065"/>
+            </Label.Background>
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0EC194" Offset="0"/>
+                    <GradientStop Color="#FF2C90FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <TextBox Name="betAmount" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="413,418,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="45" FontSize="28" FontWeight="Bold" BorderBrush="#FF00655E" Background="#FF00655E" Opacity="0.65">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF946363"/>
+                    <GradientStop Color="#FFFFF7F7" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <Button Name="hitButton" Content="Hit" HorizontalAlignment="Left" Margin="78,295,0,0" VerticalAlignment="Top" Height="55" Width="130" Click="onHitClick" FontWeight="Bold" FontSize="32" Opacity="0">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9" Offset="0"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="840,513,0,0" VerticalAlignment="Top" Height="46" Width="120" Click="onExitClick" FontWeight="Bold" FontSize="32" Opacity="0.9">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9" Offset="0"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image Name="clubs2" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/2_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds2" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/2_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts2" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/2_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades2" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/2_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubs3" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/3_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds3" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/3_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts3" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/3_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades3" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/3_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubs4" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/4_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds4" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/4_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts4" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/4_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades4" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/4_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubs5" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/5_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds5" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/5_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts5" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/5_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades5" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/5_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubs6" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/6_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds6" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/6_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts6" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/6_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades6" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/6_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubs7" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/7_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds7" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/7_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts7" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/7_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades7" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/7_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubs8" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/8_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds8" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/8_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts8" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/8_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades8" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/8_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubs9" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/9_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds9" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/9_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts9" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/9_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades9" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/9_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubs10" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/99_10_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamonds10" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/99_10_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="hearts10" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/99_10_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spades10" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/99_10_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubsJack" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/jack_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamondsJack" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/jack_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="heartsJack" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/jack_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spadesJack" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/jack_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubsKing" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/king_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamondsKing" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/king_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="heartsKing" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/king_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spadesKing" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/king_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="clubsQueen" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/queen_of_clubs.png" Stretch="Fill"/>
+        <Image Name="diamondsQueen" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/queen_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="heartsQueen" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/queen_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spadesQueen" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/queen_of_spades.png" Stretch="Fill"/>
+
+        <Image Name="diamondsAce" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/r__ace_of_diamonds.png" Stretch="Fill"/>
+        <Image Name="clubsAce" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/r_ace_of_clubs.png" Stretch="Fill"/>
+        <Image Name="heartsAce" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/r_ace_of_hearts.png" Stretch="Fill"/>
+        <Image Name="spadesAce" Margin="788,104,66,273" Source="/Pictures/BlackJack/Card/r_ace_of_spades.png" Stretch="Fill"/>
+
+
+        <Image Margin="785,104,63,273" Source="/Pictures/BlackJack/Card/1_back.png" Stretch="Fill"/>
+        <Label Name="dealerPoints" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="34,210,0,0" VerticalAlignment="Top" Width="218" Height="45" FontSize="26" FontWeight="Bold" FontFamily="Times New Roman" Content="">
+            <Label.Background>
+                <SolidColorBrush Color="#FF8A3030" Opacity="0.065"/>
+            </Label.Background>
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8463FF"/>
+                    <GradientStop Color="#FF0CEAB2" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Name="playerPoints" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="34,461,0,0" VerticalAlignment="Top" Width="218" Height="45" FontSize="26" FontWeight="Bold" FontFamily="Times New Roman">
+            <Label.Background>
+                <SolidColorBrush Color="#FF8A3030" Opacity="0.065"/>
+            </Label.Background>
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8463FF"/>
+                    <GradientStop Color="#FF0CEAB2" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button Name="playAgain" Opacity="0"  Content="Play again?" HorizontalAlignment="Left" Margin="408,320,0,0" VerticalAlignment="Top" Height="49" Width="170" Click="onPlayAgainClick" FontWeight="Bold" FontSize="26">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9" Offset="0"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image Opacity="0" Name="catWonGif" Margin="43,13,757,370" gif:ImageBehavior.AnimatedSource="/Pictures/BlackJack/catWon.gif" Stretch="Fill"/>
+        <Label Content="                  How to play:&#xD;&#xA;* Get more points than opponent!&#xD;&#xA;* If you have more than 21 points,&#xD;&#xA;   you lose!&#xD;&#xA;* If you get exactly 21 points,&#xD;&#xA;   you win!" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="691,320,0,0" VerticalAlignment="Top" Width="299" Height="164" FontSize="20" FontWeight="Medium" FontFamily="Times New Roman">
+            <Label.Background>
+                <SolidColorBrush Color="#FF8A3030" Opacity="0.065"/>
+            </Label.Background>
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB19CFF"/>
+                    <GradientStop Color="#FF0CEAB2" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button Click="onEnterBetClick" Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="464,468,0,0" VerticalAlignment="Top" Height="49" Width="94" FontWeight="Bold" FontSize="32" Opacity="0.9">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9" Offset="0"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

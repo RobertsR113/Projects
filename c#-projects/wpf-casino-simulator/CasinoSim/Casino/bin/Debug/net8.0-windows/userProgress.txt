@@ -1,0 +1,17 @@
+[
+  {
+    "UserName": "Bob",
+    "UserPassword": "1111",
+    "Points": 67,
+    "userStats": [
+      {
+        "IsWin": true,
+        "Bet": 6
+      },
+      {
+        "IsWin": true,
+        "Bet": 23
+      }
+    ]
+  }
+]

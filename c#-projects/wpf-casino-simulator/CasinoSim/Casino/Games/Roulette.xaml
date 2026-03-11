@@ -1,0 +1,147 @@
+﻿<Window x:Class="Casino.Games.Roulette"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Casino.Games"
+        mc:Ignorable="d"
+        Title="Roulette" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="309*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Games/Roulette.png"/>
+        </Grid.Background>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="675,233,0,0" VerticalAlignment="Top" Height="43" Width="101" Click="onExitClick" FontSize="20" FontWeight="Bold" Opacity="0.9" Grid.Row="1">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Name="betAmount" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="342,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Height="28" FontSize="20" FontWeight="Bold" BorderBrush="#FF7FFF53" Grid.Row="1">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF946363"/>
+                    <GradientStop Color="#FFFFF7F7" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.8">
+                    <GradientStop Color="#FF155D2A"/>
+                    <GradientStop Color="#FF3BE635" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox Name="specificNr" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="145,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="38" FontSize="20" FontWeight="Bold" BorderBrush="Black" Grid.Row="1">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF946363"/>
+                    <GradientStop Color="#FFFFF7F7" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.8">
+                    <GradientStop Color="#FF370B0B"/>
+                    <GradientStop Color="#FFFD2F2F" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label Name="betAmountLabel" Content="Bet amount:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="183,247,0,0" VerticalAlignment="Top" Width="154" Height="39" FontSize="26" FontWeight="Bold" FontFamily="Times New Roman" Grid.Row="1">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE5FFB0"/>
+                    <GradientStop Color="#FF98F517" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button Content="Red" Name="onRedClick" HorizontalAlignment="Left" Margin="46,161,0,0" VerticalAlignment="Top" Height="40" Width="60" Click="onRedClick_Click" FontWeight="Bold" FontSize="16" Foreground="#FFFF4949" Background="#FFAD4343" BorderBrush="DarkRed" Grid.Row="1"/>
+        <Button Content="Black" Name="onBlackClick" HorizontalAlignment="Left" Margin="46,215,0,0" VerticalAlignment="Top" Height="40" Width="60" Click="onBlackClick_Click" FontSize="16" FontWeight="Bold" BorderBrush="darkRed" Background="#FF717171" Grid.Row="1"/>
+        <Button Content="Odd" Name="onOddClick" HorizontalAlignment="Left" Margin="133,215,0,0" VerticalAlignment="Top" Height="40" Width="60" Click="onOddClick_Click" FontSize="16" FontWeight="Bold" BorderBrush="darkRed" Foreground="White" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Even" Name="onEvenClick" HorizontalAlignment="Left" Margin="133,161,0,0" VerticalAlignment="Top" Height="40" Width="60" Click="onEvenClick_Click" FontSize="16" FontWeight="Bold" BorderBrush="darkRed" Foreground="White" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Name="specificNrLabel" Content="Betting Nr:"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Width="130" Height="40" FontSize="22" FontWeight="Bold" FontFamily="Times New Roman" Grid.Row="1">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.01"/>
+                    <GradientStop Color="#FFF51717" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Image Opacity="1" Name="RouletteSpin" Margin="2,0,494,195" gif:ImageBehavior.AnimatedSource="/Pictures/Roulette/RouletteSpin.gif" Stretch="Fill" Grid.RowSpan="2"/>
+        <Label Name="messageDisplay" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="306,92,0,0" VerticalAlignment="Top" Width="484" Height="101" FontSize="26" FontWeight="Bold" FontFamily="Times New Roman" Content="" Foreground="DarkRed" Grid.Row="1"/>
+        <Canvas x:Name="RouletteOverlay" IsHitTestVisible="False" Grid.RowSpan="2" Margin="-354,-33,354,33">
+            <Image x:Name="winningChoice" Source="/Pictures/Roulette/winningChoice.png" Width="78" Height="40" Stretch="Uniform" Canvas.Left="384" Canvas.Top="161" Opacity="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Image x:Name="winningChoice2" Source="/Pictures/Roulette/winningChoice.png" Width="78" Height="40" Stretch="Uniform" Canvas.Left="384" Canvas.Top="161" Opacity="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Image x:Name="winningNr" Source="/Pictures/Roulette/winningNr.png" Width="40" Height="53" Stretch="Uniform" Canvas.Left="307" Canvas.Top="9" Opacity="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        </Canvas>
+        <Button Content="Enter" Name="enterClickButton" HorizontalAlignment="Left" Margin="219,189,0,0" VerticalAlignment="Top" Height="43" Width="82" Click="onEnterClick" FontSize="20" FontWeight="Bold" Opacity="0.9" Grid.Row="1">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="playAgainButton" Content="Play Again?" HorizontalAlignment="Left" Margin="364,202,0,0" VerticalAlignment="Top" Height="43" Width="125" Click="onPlayAgainClick" FontSize="20" FontWeight="Bold" Opacity="0.9" Grid.Row="1">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Click="onEnterBetClick" Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="511,253,0,0" VerticalAlignment="Top" Height="32" Width="73" FontSize="20" FontWeight="Bold" Opacity="0.9" Grid.Row="1">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC9C9"/>
+                    <GradientStop Color="#FFDA2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF4A2C2C"/>
+                    <GradientStop Color="#FF291616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
