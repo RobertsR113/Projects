@@ -15,6 +15,6 @@ To showcase my knowledge and skillset in C#, Blazor acquired during my second-ye
 * Clean and well structured project.
 
 ## How To Test:
-1. Download the project `wpf-casino-simulator`
+1. Download the project `blazor-market-simulator`
 2. Install `Visual Studio 2026`
-3. In Visual Studio: Click on `Open a project or solution` -> Open `wpf-casino-simulator/CasinoSim` -> Click on `CasinoSimulator.sln`
+3. In Visual Studio: Click on `Open a project or solution` -> Open `blazor-market-simulator/MarketSimulator` -> Click on `MarketSim.sln`
