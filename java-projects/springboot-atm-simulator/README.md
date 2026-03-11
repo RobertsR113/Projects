@@ -12,7 +12,8 @@ To showcase my knowledge and skills in Java Spring Boot web development acquired
 ### Features:
 * Register/Login customer accounts and manage withdraw of bank money.
 * User can withdraw min or max currency depending on ATM storage.
-* Admin login, has access to Logs, Refill ATM - refill ATM currencies, view registered users/cards and balance. 
+* Admin login, has access to Logs, Refill ATM - refill ATM currencies, view registered users/cards and balance.
+* Users are saved/loaded from a persistant storage.
 * Clean and well structured project.
 
 ## How To Test:
