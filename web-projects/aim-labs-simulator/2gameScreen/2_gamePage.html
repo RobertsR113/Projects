@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="2_gameJs.js"></script>
+    <script src="2.1_circleLogic.js"></script>
+    <script src="2.2_timerLogic.js"></script>
+    <link href="2_gameDesign.css" rel="stylesheet"></link>
+    <link href="2.1_circleDesign.css" rel="stylesheet"></link>
+    <link href="2.2_timerDesign.css" rel="stylesheet"></link>
+    <link href="2.3_buttonDesign.css" rel="stylesheet"></link>
+
+    <title>Game</title>
+</head>
+<body style="background-color: rgb(44, 43, 43);" onload="onLoad()">
+
+    <div class="topPart-design">
+        <span id="points" class="points-design">Points: 0</span>
+        <span id="timer" class="timer-design">Timer</span>
+        <span id="chosenDifficulty" class="difficultyText-design">Difficulty</span>
+        <span id="circleMessage" class="clickPoints-design"></span>
+    </div>
+
+    <div class="mainPart-design" id="border">
+        <div class="difficultyButton-design ">
+            <button id="play" onclick="onPlayClick()" class="playButton-design">Play</button>
+            <br>
+            <button id="easy" disabled onclick="onDifficultyClick('Easy')" class="easyButton-design">Easy</button>
+            <button id="hard" disabled onclick="onDifficultyClick('Hard')" class="hardButton-design">Hard</button>
+            <button id="insane" disabled onclick="onDifficultyClick('Insane')" class="insaneButton-design">Insane</button>
+        </div>
+
+        <button id="circleButton" onclick="onCircleClick()" class="circle-design"></button>
+        <span id="circleText" class="circleText-design"></span>
+
+        <button id="timerButton" onclick="onTimerClick()" class="timerButton-design" disabled = true>
+            <img src="timerIcon.png">
+        </button>
+    </div>
+    <span id="username" class="username-design"></span>
+
+</body>
+</html>

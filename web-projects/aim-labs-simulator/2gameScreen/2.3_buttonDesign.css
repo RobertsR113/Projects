@@ -1,0 +1,56 @@
+.difficultyButton-design 
+{
+    margin-top: 30vh;
+    margin-left: 40w;
+}
+
+.playButton-design
+{
+    font-weight: bold;
+    font-size: 50px;
+    background-color: rgb(61, 58, 58);
+    border: 3px solid rgb(128, 20, 20);
+    border-radius: 15px;
+
+    width: 140px;
+    height: 75px;
+}
+
+.easyButton-design
+{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(48, 168, 58);
+    border: 2px solid rgb(20, 128, 74);
+    border-radius: 15px;
+
+    margin-right: 10px;
+    width: 120px;
+    height: 55px;  
+    opacity: 0;
+}
+.hardButton-design
+{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(168, 48, 48);
+    border: 2px solid rgb(128, 20, 20);
+    border-radius: 15px;
+
+    margin-right: 10px;
+    width: 120px;
+    height: 55px;  
+    opacity: 0;
+}
+.insaneButton-design
+{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(134, 48, 168);
+    border: 2px solid rgb(124, 20, 128);
+    border-radius: 15px;
+
+    width: 120px;
+    height: 55px;  
+    opacity: 0;
+}
