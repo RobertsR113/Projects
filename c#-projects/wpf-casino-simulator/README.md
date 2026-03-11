@@ -2,7 +2,7 @@
 
 ### Created Using:
 * Language: C#
-* Software: Visual Studio 2024
+* Software: Visual Studio 2026
 * Framework: WPF (Windows Presentation Foundation)
 
 ## Goal
@@ -17,5 +17,5 @@ To showcase my knowledge and skillset in C#, WPF acquired during my second-year 
 
 ## How To Test:
 1. Download the project `wpf-casino-simulator`
-2. Install `Visual Studio 2024` OR `Visual Studio 2026`
+2. Install `Visual Studio 2026`
 3. In Visual Studio: Click on `Open a project or solution` -> Open `wpf-casino-simulator/CasinoSim` -> Click on `CasinoSimulator.sln`
