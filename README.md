@@ -1,7 +1,7 @@
 # Projects
 
-#### This repository contains example projects for each programming language I have learned during my 1st and 2nd study course.
+#### This repository contains projects showcasing my knowledge and skillset of each programming language I have studied during my first-year and second-year study course.
 ### - java-projects
 ### - c#-projects
 ### - web-projects
-### - sql-hospital-simulator
+### - sql-hospital-simulator-project
