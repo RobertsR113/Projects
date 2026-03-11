@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>ATM Withdrawal</title>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"
+    ></script>
+    <script th:src="@{/login.js}" type="text/javascript"></script>
+    <script th:src="@{/withdraw.js}" type="text/javascript"></script>
+</head>
+<body>
+<h2>Welcome to the ATM</h2>
+<p>Your Card: <span id="cardNumber"></span></p>
+<p>Your Balance: <span id="balance">Loading...</span> €</p>
+
+<input
+        id="withdrawAmount"
+        type="number"
+        placeholder="Enter amount"
+        min="1"
+        required
+/>
+
+<button id="withdrawButtonMin">Withdraw MIN</button>
+<button id="withdrawButtonMax">Withdraw MAX</button>
+
+<p id="withdrawResult"></p>
+</body>
+</html>

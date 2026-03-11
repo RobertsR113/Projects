@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"
+    ></script>
+    <script th:src="@{/login.js}" type="text/javascript"></script>
+    <script th:src="@{/register.js}" type="text/javascript"></script>
+</head>
+<body>
+<input id="cardNr" placeholder="Card Number" />
+<input id="pass" type="password" placeholder="PIN" />
+
+<button onclick="loginClick()">Login</button>
+<button onclick="registerClick()">Register</button>
+<div id="loginMessage" style="display: none; color: black"></div>
+</body>
+</html>

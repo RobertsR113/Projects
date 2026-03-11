@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Refill ATM</title>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"
+    ></script>
+    <script th:src="@{/refill.js}" type="text/javascript"></script>
+</head>
+<body>
+<h2>Refill ATM</h2>
+<p>
+    <strong>Current ATM Balance:</strong>
+    <span id="atmBalance">Loading...</span> €
+</p>
+<p>Enter the number of banknotes to add:</p>
+<input id="fivehundred" type="number" placeholder="500 €" />
+<input id="hundred" type="number" placeholder="100 €" />
+<input id="fifty" type="number" placeholder="50 €" />
+<input id="twenty" type="number" placeholder="20 €" />
+<input id="ten" type="number" placeholder="10 €" />
+<input id="five" type="number" placeholder="5 €" />
+<button onclick="refillATM()">Submit</button>
+
+<div id="example" style="margin-top: 20px; color: red; font-weight: bold"></div>
+</body>
+</html>

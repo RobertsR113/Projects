@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Registered Users</title>
+</head>
+<body>
+<h2>Registered Users</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Card Number</th>
+        <th>PIN</th>
+        <th>Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="client : ${clients}">
+        <td th:text="${client.cardNumber}"></td>
+        <td th:text="${client.pin}"></td>
+        <td th:text="${client.balance} + ' €'"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
