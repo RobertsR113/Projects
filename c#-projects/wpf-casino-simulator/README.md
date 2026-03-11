@@ -8,10 +8,11 @@
 To showcase my knowledge and skillset in C#, WPF acquired during my second-year course, C# Fundamentals.
 
 ## Features
-* User login/registration
-* User stats, points, luck, min/max bets
-* 3 different gamemodes: Roulette, BlackJack and Slots
-* User stats saved and loaded from a persistant storage
+* User login/registration.
+* User stats, points, luck, min/max bets.
+* 3 different gamemodes: Roulette, BlackJack and Slots.
+* User stats saved and loaded from a persistant storage.
+* Clean and well structured project.
 
 ## How To Test:
 1. Download the project `javafx-staff-management-system`
