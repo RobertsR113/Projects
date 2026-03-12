@@ -1,0 +1,17 @@
+.timer-design
+{
+    position: absolute; 
+    font-size: 4vh;
+    color: rgb(202, 238, 255); 
+
+    left: 50%;  
+    transform: translateX(-50%);
+    padding-top: 1vh;
+}
+.timerButton-design
+{
+    position: absolute;
+    opacity: 0;
+    background-color: transparent;
+    border-color: transparent;
+}

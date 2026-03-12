@@ -1,0 +1,68 @@
+.gameEnd-design
+{
+    position: absolute;
+    border: 3px solid;
+    border-color: rgb(128, 20, 20);
+    background-color: rgb(27, 26, 26);
+
+    width: 35vw;
+    height: 45vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+
+    overflow: auto;
+    text-align: center;
+}
+
+.gameOverText-design
+{
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(238, 23, 23);
+    margin-top: 5vh;
+}
+
+.finalScore-design
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(23, 194, 23);
+}
+
+.endgameUsername-design
+{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(22, 180, 228);
+    margin-top: 3vh;
+}
+
+.playAgainButton-design
+{
+    margin-top: 10vh;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(61, 58, 58);
+    border: 2px solid rgb(128, 20, 20);
+    border-radius: 15px;
+
+    width: 150px;
+    height: 40px;  
+}
+
+.leaderboardButton-design
+{
+    margin-top: 2vh;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(61, 58, 58);
+    border: 2px solid rgb(128, 20, 20);
+    border-radius: 15px;
+
+    width: 150px;
+    height: 40px;  
+}

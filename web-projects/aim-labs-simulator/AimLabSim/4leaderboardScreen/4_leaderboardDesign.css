@@ -1,0 +1,63 @@
+.leaderBoardCol-design
+{
+    width: 15vw;
+    height: 4vh;
+    border: 6px solid;
+    border-color: rgb(128, 20, 20);
+
+    font-size: 35px;
+    font-weight: bold; 
+}
+
+.leaderBoardUsername-design
+{
+    width: 15vw;
+    height: 3vh;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-color: rgb(180, 50, 33);
+
+    font-size: 25px;
+    font-weight: bold;
+    color: aqua;
+}
+
+.leaderBoardPoints-design
+{
+    width: 15vw;
+    height: 3vh;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-color: rgb(180, 50, 33);
+
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(81, 255, 0);
+}
+
+.leaderBoardDifficulty-design
+{
+    width: 15vw;
+    height: 3vh;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-color: rgb(180, 50, 33);
+
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(195, 0, 255);
+}
+
+.backButton-design
+{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(61, 58, 58);
+    border: 3px solid rgb(128, 20, 20);
+    border-radius: 15px;
+
+    width: 8vw;
+    height: 6vh;
+    margin-left:46vw;
+    margin-top: 50vh;
+}

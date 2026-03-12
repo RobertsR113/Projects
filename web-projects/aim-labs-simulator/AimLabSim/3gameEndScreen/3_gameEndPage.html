@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../2gameScreen/2_gameDesign.css" rel="stylesheet"></link>
+    <link href="3_gameEndDesign.css" rel="stylesheet"></link>
+    <script src="3_gameEndJs.js"></script>
+    <title>Document</title>
+</head>
+<body onload="showFinalScore()" style="background-color: rgb(44, 43, 43);">
+    <div class="topPart-design"></div>
+    <div class="mainPart-design">
+        <span class="gameOverText-design">Game Over</span>
+        <div class="gameEnd-design">
+            <div style="padding-top: 30px; color: chartreuse;">
+                <span id="finalScore" class="finalScore-design"></span> 
+                <br>
+                <span id="username" class="endgameUsername-design"></span> 
+                <br>
+                <button onClick="onPlayAgainClick()" class="playAgainButton-design">Play Again</button>
+                <br>
+                <button onClick="onLeaderboardClick()" class="leaderboardButton-design">Leaderboard</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
