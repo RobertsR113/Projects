@@ -2,7 +2,8 @@
 
 ### Created Using:
 * Language: SQL
-* Software: SQL Server Management Studio
+* Software: SQL Server Management Studio 22
+* Database server: SQL Server Express 2025
 
 ## Goal
 To showcase my knowledge and skillset in SQL acquired during my second-year course, Database Systems.
