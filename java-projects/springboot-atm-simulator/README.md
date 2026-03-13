@@ -1,7 +1,7 @@
 # SpringBoot ATM Simulator
 
 ### Created Using:
-* To Create Project: start.spring.io
+* start.spring.io
 * Languages: Java, JS, HTML.
 * Software: IntelliJ 2024 Community Edition.
 * Libraries: Thymeleaf, Spring Web and jQuirry.
